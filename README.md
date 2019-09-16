@@ -16,4 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-1. added trival react app
+Following are commit based point
+
+1. added trival react app: [https://github.com/a2batic/Learn-React-way/commit/b32c596f5bad87bea9728b926c213e9b6b863dba](b32c596f5bad87bea9728b926c213e9b6b863dba)
+2. Introduction of JSX in code: 
