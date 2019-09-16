@@ -1,5 +1,5 @@
-import React from 'react'; //
-import ReactDOM from 'react-dom';//render method to add html to DOM
+import React from 'react'; 
+import ReactDOM from 'react-dom';
 
 //React became famous due to its component based structure
 //We create a user interface simply by creating a nesting a collection of component
@@ -7,23 +7,31 @@ import ReactDOM from 'react-dom';//render method to add html to DOM
 //component
 //Use ES6 'class'
 class Message extends React.Component {
-    //All React components has render method
-    //render() = what we wnat to render to the DOM
+    //to make a component elements or data dynamic we use React Props
+    //using props we can pass data to component
     render(){
+        console.log(this.props)
         return (
-            //adding elements
             <div>
-                <h1>Hello Everyone</h1>
+                <h1 style={{color: this.props.color}}>{/**Since style take an object hence {{}} */}
+                    {this.props.msg}
+                </h1>
+                {/* Here {} is again a JSX expression.
+                We can access the properties via the this.props object
+                followed by the key or attribute name */}
+                <p>minutes:{this.props.time} min</p>
+                <p>Code is working? {this.props.work ? 'Yes' : 'No'}</p>
             </div>
         )
     }
 }
 
-//rendering above `Message` component to the DOM
-ReactDOM.render(<Message />, document.getElementById('root'), //where do you want to render (element already present in public/index.html)
+
+ReactDOM.render(
+    <Message time={50} color="blue" msg="how are you?" work={true}/>, 
+    //here msg is a prop "string" {not a string, number, boolean etc} <= JSX
+    //Boolean cant be printed as such like strings and number, they just can be used
+    document.getElementById('root')
 )
 
-// Note: All the component are capitalised else you will get following error
-// Warning: The tag <message> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
-// This is a change that has been introduced in recent version of React
-//Why? There needs to be a way to distinguish between just regular JSX element like div h1 and our components
+// Props object can contain as many properties as you like
