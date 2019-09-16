@@ -1,12 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'; //
+import ReactDOM from 'react-dom';//render method to add html to DOM
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var style = {
+    backgroundColor: 'blue',
+    color: 'white',
+    fontFamily: 'Arial'
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const title = React.createElement(
+    'h1', //type of element
+    {id: 'title', className: 'header' ,style: style}, //attributes
+    'Hello orld' // children
+)
+
+ReactDOM.render(
+    title, //what we want to render
+    document.getElementById('root'), //where do you want to render (element already present in public/index.html)
+)
