@@ -1,39 +1,29 @@
 import React from 'react'; //
 import ReactDOM from 'react-dom';//render method to add html to DOM
 
-var style = {
-    backgroundColor: 'blue',
-    color: 'white',
-    fontFamily: 'Arial'
+//React became famous due to its component based structure
+//We create a user interface simply by creating a nesting a collection of component
+
+//component
+//Use ES6 'class'
+class Message extends React.Component {
+    //All React components has render method
+    //render() = what we wnat to render to the DOM
+    render(){
+        return (
+            //adding elements
+            <div>
+                <h1>Hello Everyone</h1>
+            </div>
+        )
+    }
 }
 
-// const title = React.createElement(
-//     'h1', //type of element
-//     {id: 'title', className: 'header' ,style: style}, //attributes
-//     'Hello world' // children
-// )
-
-// const listItem = React.createElement(
-//     'ul', //type of element
-//     {id: 'title', className: 'header' ,style: style}, //attributes
-//     React.createElement(
-//         'li',
-//         {},
-//         'items on the list'
-//     )
-// )
-
-//Its hard to render each element like above
-//Lets simplify this
-//React provides us with a different syntax called JSX - Javascript as XML 
-//tag based syntax to skip on create react element calls and used this much cleaner tag based syntax
-
-ReactDOM.render(
-    <div style={style}>
-        {/* JSX curly braces to give style */}
-        <h1 id="heading-elem">Hello World</h1>
-        <p>Glad you are here</p>
-    </div>,
-    document.getElementById('root'), //where do you want to render (element already present in public/index.html)
+//rendering above `Message` component to the DOM
+ReactDOM.render(<Message />, document.getElementById('root'), //where do you want to render (element already present in public/index.html)
 )
 
+// Note: All the component are capitalised else you will get following error
+// Warning: The tag <message> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
+// This is a change that has been introduced in recent version of React
+//Why? There needs to be a way to distinguish between just regular JSX element like div h1 and our components

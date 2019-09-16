@@ -1,6 +1,6 @@
 # Learn-React-way
 Started to learn React in small steps, so adding my progress
-Course following - [https://www.linkedin.com/learning/react-js-essential-training-3/create-react-elements?u=2056732] (React cource on Lynda)
+Course following - [React cource on Lynda](https://www.linkedin.com/learning/react-js-essential-training-3/create-react-elements?u=2056732)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -18,5 +18,6 @@ You will also see any lint errors in the console.
 
 Following are commit based point
 
-1. added trival react app: [https://github.com/a2batic/Learn-React-way/commit/b32c596f5bad87bea9728b926c213e9b6b863dba](b32c596f5bad87bea9728b926c213e9b6b863dba)
-2. Introduction of JSX in code: 
+1. [added trival react app](https://github.com/a2batic/Learn-React-way/commit/b32c596f5bad87bea9728b926c213e9b6b863dba)
+2. [Introduction of JSX in code](https://github.com/a2batic/Learn-React-way/commit/7bd23c3524141b80b572e7e66e21d2d79bcdaa7c)
+3. [Introduction to React components]()
