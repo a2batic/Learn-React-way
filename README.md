@@ -23,4 +23,5 @@ Following are commit based point
 3. [Introduction to React components](https://github.com/a2batic/Learn-React-way/commit/b7cf14aedb06343a141d3fb55769987ef31a7adb)
 4. [Adding properties to React components](https://github.com/a2batic/Learn-React-way/commit/f23317fd13625c7b95eafc8e488b7690f9a86c9b)
 5. [Destructuring - shortening the code](https://github.com/a2batic/Learn-React-way/commit/c86e60f2450029eefc1093fbc9ac4b6a87f32147)
-6. [Adding custom methods to React Component]()
+6. [Adding custom methods to React Component](https://github.com/a2batic/Learn-React-way/commit/430e1b845492651e4bc71fb8f52ad32f0ed2a2f9)
+7. [Creating Functional React components instead of using Class]()

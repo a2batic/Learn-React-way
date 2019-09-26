@@ -8,36 +8,54 @@ let skiData = {
     goal: 100
 }
 
-class SkiDayCounter extends Component {
-  // Custom Methods in React components using ES6 class
-  getPercent = decimal => {
+// class SkiDayCounter extends Component {
+//     render() {
+//         return (
+//            ...
+//         )
+//     }
+// }
+
+// ES6 classes are not the only way to create a React components
+// You can also create a component as a Function (Note: Classes are
+// a special type of Function in Javascript)
+// How?
+// Using JS Syntax, we can create a JS function that returns JSX elements
+// to be rendered
+
+// How to access props now? Pass props object to be consumed by component
+
+// Custom functions:
+// Preferred creating outside to avoid function inside a function
+const getPercent = decimal => {
     return decimal * 100 + '%';
-  }
-  calGoalProgress = (total,goal) => {
-    return this.getPercent(total/goal);
-  }
-    render() {
-      // Destructuring props - shorting the syntax
-      const {total, powder, backcountry, goal} = this.props;
-        return (
-            <section>
-              <div>
-                <p>Total Days: {total}</p>
-              </div>
-              <div>
-                <p>Powder Days: {powder}</p>
-              </div>
-              <div>
-                <p>Backcountry Days: {backcountry}</p>
-              </div>
-              <div>
-                <p>Goal Progress: {this.calGoalProgress(total, goal)}</p>
-              </div>
-            </section>
-        )
-    }
 }
 
+const calGoalProgress = (total,goal) => {
+    return getPercent(total/goal);
+}
+
+//const SkiDayCounter = (props) => {
+  // Destructuring the properties
+const SkiDayCounter = ({total, powder,backcountry,goal}) => {
+  return (
+      <section>
+        <div>
+          {/** <p>Total Days: {props.total}</p>*/}
+          <p>Total Days: {total}</p>
+        </div>
+        <div>
+          <p>Powder Days: {powder}</p>
+        </div>
+        <div>
+          <p>Backcountry Days: {backcountry}</p>
+        </div>
+        <div>
+          <p>Goal Progress: {calGoalProgress(total, goal)}</p>
+        </div>
+      </section>
+    )
+}
 
 render(
     <SkiDayCounter
