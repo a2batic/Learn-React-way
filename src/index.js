@@ -1,6 +1,4 @@
-import React, { Component } from 'react'; // Destructuring of Component
-// React is important for any file using JSX, so importing react cant be
-// avoided even through its not used directly.
+import React, { Component } from 'react';
 import {render} from 'react-dom';
 
 let skiData = {
@@ -10,7 +8,14 @@ let skiData = {
     goal: 100
 }
 
-class SkiDayCounter extends Component { //Hence removed React from here
+class SkiDayCounter extends Component {
+  // Custom Methods in React components using ES6 class
+  getPercent = decimal => {
+    return decimal * 100 + '%';
+  }
+  calGoalProgress = (total,goal) => {
+    return this.getPercent(total/goal);
+  }
     render() {
       // Destructuring props - shorting the syntax
       const {total, powder, backcountry, goal} = this.props;
@@ -26,7 +31,7 @@ class SkiDayCounter extends Component { //Hence removed React from here
                 <p>Backcountry Days: {backcountry}</p>
               </div>
               <div>
-                <p>Goal Days: {goal}</p>
+                <p>Goal Progress: {this.calGoalProgress(total, goal)}</p>
               </div>
             </section>
         )
