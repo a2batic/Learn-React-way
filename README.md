@@ -21,4 +21,5 @@ Following are commit based point
 1. [added trival react app](https://github.com/a2batic/Learn-React-way/commit/b32c596f5bad87bea9728b926c213e9b6b863dba)
 2. [Introduction of JSX in code](https://github.com/a2batic/Learn-React-way/commit/7bd23c3524141b80b572e7e66e21d2d79bcdaa7c)
 3. [Introduction to React components](https://github.com/a2batic/Learn-React-way/commit/b7cf14aedb06343a141d3fb55769987ef31a7adb)
-4. [Adding properties to React components]()
+4. [Adding properties to React components](https://github.com/a2batic/Learn-React-way/commit/f23317fd13625c7b95eafc8e488b7690f9a86c9b)
+5. [Destructuring - shortening the code]()
