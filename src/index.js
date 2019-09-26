@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 
-// Mutliple components
+// For multiple data
+let bookList = [
+  {'title': 'abc', 'author': 'abc', 'pages': 2},
+  {'title': 'def', 'author': 'vfd', 'pages': 3},
+  {'title': 'dff', 'author': 'saa', 'pages': 6}
+]
 
-const Library = () => { // Parents Component
+const Library = ({books}) => {
   return (
     <div>
-      <Book title='abc' author='abc' pages={2}/> // Child Component
-      <Book title='def' author='def' pages={3}/>
-      <Book title='rty' author='ert' pages={6}/>
+      {/**{ books.map(book =>
+        <Book title={book.title}
+              author={book.author}
+              pages={book.pages}/>
+            )}
+      Worked BUT: console has a
+      WARNING: Each child in a list should have a unique "key" prop.
+      We need to add a key to each dynamically rendered child,
+      so this serves as a unique identifier, which will help track
+      which of these COMPONENT are updating and rendering with react
+*/}
+      { books.map((book,i) =>
+        <Book key={i}
+              title={book.title}
+              author={book.author}
+              pages={book.pages}/>
+            )}
+      {/**All our components has a unique Key which will help us
+      rendering and now React UI are a reflection of data -
+      Check Chrome React console*/ }
+
     </div>
   )
 }
@@ -24,20 +47,7 @@ const Book = ({title, author, pages}) => {
 }
 
 render(
-    //What to do if we want 2 components
-    //------try 1
-    // <Library/>
-    // <Book title='abc' author='abc' pages={2}/>,
-    //------error : Parsing error: Adjacent JSX elements must
-    //be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?
-    //-----try 2 (wrapping under div)
-    // <div>
-    //   <Library/>
-    //   <Book title='abc' author='abc' pages={2}/>
-    // </div>,
-    // Worked
-    //---- try3 (creating another component)
-    <Library />,
-    // Worked
+    <Library books={bookList}/>, // making bookList accessible within
+    // our component Library and then in the book
     document.getElementById('root')
 )

@@ -25,4 +25,5 @@ Following are commit based point
 5. [Destructuring - shortening the code](https://github.com/a2batic/Learn-React-way/commit/c86e60f2450029eefc1093fbc9ac4b6a87f32147)
 6. [Adding custom methods to React Component](https://github.com/a2batic/Learn-React-way/commit/430e1b845492651e4bc71fb8f52ad32f0ed2a2f9)
 7. [Creating Functional React components instead of using Class](https://github.com/a2batic/Learn-React-way/commit/7c2ebb034a9e97dbfd8681a5b8c5d851b1f4157c)
-8. [Multiple components - Parent and Child]()
+8. [Multiple components - Parent and Child](https://github.com/a2batic/Learn-React-way/commit/631e511df719f392a08a248f2c5d485510ed65a5)
+9. [Components when we have large data]()
